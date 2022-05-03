@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.csuft.studyplatform"
+        minSdkVersion 23
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation project(path: ':compresshelper')
+    implementation project(path: ':bottomsheetpickers')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.google.android.material:material:1.2.0-alpha03'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.3'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.0'
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    //基础工具库
+    implementation "com.github.tamsiree.RxTool:RxKit:v2.4.1"
+    //UI库
+    implementation "com.github.tamsiree.RxTool:RxUI:v2.4.1"
+    //(依赖RxUI库时，需要额外依赖 cardview 库)
+    //noinspection GradleCompatible
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //功能库（Zxing扫描与生成二维码条形码 支付宝 微信）
+    implementation "com.github.tamsiree.RxTool:RxFeature:v2.4.1"
+    implementation 'com.google.zxing:android-core:3.3.0'
+    implementation 'com.google.zxing:core:3.3.2'
+    implementation project(path: ':refreshlibrary')
+    debugImplementation project(path: ':detector')
+    // mob  message
+    compile name: 'SMSSDK-2.1.1', ext: 'aar'
+    compile files('libs/MobTools-2016.0714.1402.jar')
+    compile files('libs/MobCommons-2016.0714.1402.jar')
+    // photo
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    // rx
+    compile 'io.reactivex:rxjava:1.2.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    // LeakCanary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+
+    compile 'androidx.multidex:multidex:2.0.0'
+    // 网易七鱼客服
+    compile 'com.qiyukf.unicorn:unicorn:2.9.0'
+    compile 'com.alibaba:fastjson:1.2.20'
+    // 网络访问框架okgo 封装okhttp
+    compile 'com.lzy.net:okgo:2.1.4'
+    //版本号使用 + 可以自动引用最新版
+
+    // 圆形image
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    // 九宫格图片展示和仿微信图片选择
+    compile 'com.lzy.widget:ninegridview:0.2.0'
+    compile 'com.lzy.widget:imagepicker:0.5.5'
+    //最新版本
+    // material dialog
+    compile 'com.afollestad.material-dialogs:commons:0.9.1.0'
+    compile 'com.afollestad.material-dialogs:core:0.9.1.0'
+    compile project(':easeUI_CN')
+    compile 'com.mabeijianxi:small-video-record:1.0.8'
+    compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
+    // Material Design风格的输入框开源
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    // 支持下拉刷新和上拉加载的RecyclerView
+    compile 'com.jcodecraeer:xrecyclerview:1.2.7'
+
+}

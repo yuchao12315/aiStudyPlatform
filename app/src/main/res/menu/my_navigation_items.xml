@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@mipmap/home_normal"
+        android:title="@string/text_home" />
+    <item
+        android:id="@+id/msg"
+        android:icon="@mipmap/msg"
+        android:title="@string/text_msg" />
+    <item
+        android:id="@+id/note"
+        android:icon="@mipmap/note"
+        android:title="@string/text_class" />
+    <item
+        android:id="@+id/personal_center"
+        android:icon="@mipmap/personal_center_normal"
+        android:title="我"/>
+</menu>

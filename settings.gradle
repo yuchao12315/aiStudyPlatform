@@ -1,0 +1,5 @@
+include ':bottomsheetpickers'
+include ':compresshelper'
+include ':easeUI_CN'
+include ':app', ':refreshlibrary' ,"detector"
+rootProject.name = "aiStudyPlatform"

@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'bottom-sheet-pickers'
+
+    publishedGroupId = 'com.philliphsu'
+    libraryName = 'BottomSheetPickers'
+    artifact = 'bottomsheetpickers'
+
+    libraryDescription = 'Third-party time pickers for Android'
+
+    siteUrl = 'https://github.com/philliphsu/BottomSheetPickers'
+    gitUrl = 'https://github.com/philliphsu/BottomSheetPickers.git'
+
+    libraryVersion = 25
+
+    developerId = 'philliphsu'
+    developerName = 'Phillip Hsu'
+    developerEmail = 'philliphsudev@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        // TODO: If we ever remove the duplicate number pad classes in this library and instead
+        // import our NumberPadTimePicker library, we can safely remove this line. The remaining
+        // classes in this library have no issue building with Proguard for release build type,
+        // so we don't have any exclusion rules to add.
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+}
+
+dependencies {
+    compile "com.android.support:appcompat-v7:28.0.0"
+    compile "com.android.support:gridlayout-v7:28.0.0"
+    compile "com.android.support:design:28.0.0"
+}

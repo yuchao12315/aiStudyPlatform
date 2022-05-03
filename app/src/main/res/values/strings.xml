@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">学习平台</string>
+    <string name="text_home">首页</string>
+    <string name="text_msg">消息</string>
+    <string name="text_class">笔记</string>
+    <string name="text_search">搜索</string>
+    <string name="text_search_tips">搜你想搜索的</string>
+    <string name="text_network_error_tips">网络出错，请点击重试...</string>
+    <string name="text_goods_off_prise">省%1$d元</string>
+    <string name="text_goods_original_prise">￥%1$s</string>
+    <string name="text_goods_sell_count">%1$d人已经购买</string>
+    <string name="text_tao_kou_ling">淘口令</string>
+    <string name="text_loading_tips">玩命加载中...</string>
+    <string name="text_selected_title">精选宝贝</string>
+    <string name="text_on_sell_title">特惠宝贝</string>
+    <string name="text_search_history">搜索历史</string>
+    <string name="login_register">请先登录</string>
+    <string name="text_personal_center">我</string>
+    <string name="find_pwd"> 密码找回</string>
+
+    <string name="icon_text_ok">\ue628</string>
+
+    <string name="send_back_right">\ue628</string>
+    <string-array name="release">
+        <item>相片</item>
+        <item>小视频</item>
+    </string-array>
+</resources>
